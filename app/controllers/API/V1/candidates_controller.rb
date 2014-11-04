@@ -1,4 +1,5 @@
-class Api::V1::CandidatesController < ApplicationController
+class API::V1::CandidatesController < ApplicationController
+
   def index
     @candidates = Candidate.all
     render json: @candidates

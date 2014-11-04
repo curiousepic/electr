@@ -11,8 +11,8 @@ Candidate.destroy_all
 
 @candidates = []
 
-5.times do
+7.times do
   candidate = Candidate.create!(name: Faker::Name.name,
-                            party: ["Rube", "Bleg"].sample)
+                            party: ["Same As The Old", "Lame Duck", "Piraten"].sample)
   @candidates << candidate
 end
