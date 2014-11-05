@@ -21,10 +21,10 @@ class API::V1::VotesController < ApplicationController
   end
 
   def vote_params
-    params.require(:vote).permit(:voter, :candidate)
+    params.require(:vote).permit(:voter_id, :candidate_id)
   end
 
   def set_voter
-    @voter = Voter.find(params[:voter])
+    @voter = Voter.find(params[:vote][:voter_id])
   end
 end
